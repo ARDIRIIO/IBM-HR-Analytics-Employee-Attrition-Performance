@@ -1,0 +1,104 @@
+/*
+================================================================================
+
+Nama : Rio Ardiarta Makhiyyuddin
+
+Batch : SBY - 003
+
+File ini bertujuan untuk membuat TABLE dan memasukan data pada TABLE tersebut
+
+================================================================================
+*/
+-- DDL Syntax:
+-- Create Table
+CREATE TABLE table_m3(
+    Age INT ,
+    Attrition VARCHAR (255) ,
+    BusinessTravel VARCHAR (255),
+    DailyRate INT ,
+    Department VARCHAR (255) ,
+    DistanceFromHome INT ,
+    Education INT ,
+    EducationField VARCHAR (255) ,
+    EmployeeCount INT ,
+    EmployeeNumber INT ,
+    EnvironmentSatisfaction INT ,
+    Gender VARCHAR (255) ,
+    HourlyRate INT ,
+    JobInvolvement INT ,
+    JobLevel INT ,
+    JobRole VARCHAR (255) ,
+    JobSatisfaction INT ,
+    MaritalStatus VARCHAR (255) ,
+    MonthlyIncome INT ,
+    MonthlyRate INT ,
+    NumCompaniesWorked INT ,
+    Over18 VARCHAR (255) , 
+    OverTime VARCHAR (255) , 
+    PercentSalaryHike INT , 
+    PerformanceRating INT ,
+    RelationshipSatisfaction INT ,
+    StandardHours INT ,
+    StockOptionLevel INT ,
+    TotalWorkingYears INT , 
+    TrainingTimesLastYear INT , 
+    WorkLifeBalance INT ,
+    YearsAtCompany INT ,
+    YearsInCurrentRole INT , 
+    YearsSinceLastPromotion INT ,
+    YearsWithCurrManager INT 
+);
+
+-- DML Syntax:
+-- COPY table_m3(
+--     Age,
+--     Attrition,
+--     BusinessTravel,
+--     DailyRate,
+--     Department,
+--     DistanceFromHome,
+--     Education,
+--     EducationField,
+--     EmployeeCount,
+--     EmployeeNumber,
+--     EnvironmentSatisfaction,
+--     Gender,
+--     HourlyRate,
+--     JobInvolvement,
+--     JobLevel,
+--     JobRole,
+--     JobSatisfaction,
+--     MaritalStatus,
+--     MonthlyIncome,
+--     MonthlyRate,
+--     NumCompaniesWorked,
+--     Over18, 
+--     OverTime, 
+--     PercentSalaryHike, 
+--     PerformanceRating,
+--     RelationshipSatisfaction,
+--     StandardHours,
+--     StockOptionLevel,
+--     TotalWorkingYears, 
+--     TrainingTimesLastYear, 
+--     WorkLifeBalance,
+--     YearsAtCompany,
+--     YearsInCurrentRole, 
+--     YearsSinceLastPromotion,
+--     YearsWithCurrManager
+-- )
+-- FROM 'C:\Users\lenovo\Documents\HACKTIV8\PHASE 2\EXAM\MILESTONE 3\P2M3_rio_ardiarta_data_raw.csv'
+-- DELIMITER ',' CSV HEADER;
+
+-- Saat melakukan running pada sql terjadi error
+-- ERROR:  could not open file "C:\Users\lenovo\Documents\HACKTIV8\PHASE 2\EXAM\MILESTONE 3\P2M3_rio_ardiarta_data_raw.csv" for reading: Permission denied
+-- HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy. 
+
+-- SQL state: 42501
+
+
+\copy table_m3 FROM 'C:\Users\lenovo\Documents\HACKTIV8\PHASE 2\EXAM\MILESTONE 3\P2M3_rio_ardiarta_data_raw.csv' DELIMITER ',' CSV HEADER;
+
+-- Setelah mencoba beberapa kali, dapat masukkan dari teman untuk memanggil dari psql tool dengan syntax diatas menggunaka PSQL Tools
+
+SELECT * FROM public.table_m3

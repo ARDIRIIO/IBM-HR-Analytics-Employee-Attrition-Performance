@@ -1,0 +1,73 @@
+MILESTONE 3
+
+NAMA : RIO ARDIARTA MAKHIYYUDDIN
+
+BATCH : SBY-003
+
+CONCEPTUAL PROBLEM
+
+
+1. **Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui !**
+
+- **NoSQL (Not Only SQL)** adalah istilah yang digunakan untuk menggambarkan jenis database yang tidak menggunakan model relasional tradisional yang digunakan dalam database SQL (Structured Query Language). Konsep NoSQL muncul sebagai tanggapan terhadap kebutuhan akan penyimpanan dan pengolahan data yang lebih fleksibel, scalable, dan terdistribusi, terutama dalam skala web dan aplikasi modern yang membutuhkan kinerja tinggi dan skalabilitas horizontal.
+
+2. **Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System !**
+
+- Kapan menggunakan **NoSQL**:
+
+    - `Skalabilitas Horizontal`: Jika aplikasi Anda memerlukan skalabilitas horizontal yang tinggi untuk menangani volume data yang besar atau meningkat dengan cepat, NoSQL bisa menjadi pilihan yang baik. NoSQL mendukung distribusi data di antara beberapa node dengan mudah.
+
+    - `Fleksibilitas Skema`: Jika aplikasi Anda membutuhkan fleksibilitas dalam model data, di mana skema data dapat berubah seiring waktu atau data yang tidak terstruktur lebih umum, NoSQL adalah pilihan yang tepat. Misalnya, aplikasi media sosial yang menyimpan data pengguna dengan properti yang bervariasi dapat mengambil keuntungan dari fleksibilitas skema NoSQL.
+
+- Kapan menggunakan **RDBMS**:
+
+    - `Integritas Data yang Tinggi`: Jika aplikasi Anda membutuhkan kebutuhan akan integritas data yang tinggi, seperti transaksi keuangan atau sistem manajemen inventaris, RDBMS mungkin lebih cocok. RDBMS mendukung transaksi ACID (Atomicity, Consistency, Isolation, Durability) yang memastikan konsistensi data.
+
+    - `Skema yang Stabil`: Jika struktur data Anda cenderung stabil dan tidak banyak berubah dari waktu ke waktu, menggunakan RDBMS mungkin lebih sesuai. RDBMS memungkinkan Anda mendefinisikan skema tabel yang ketat sebelumnya, yang dapat memberikan keamanan dan ketertiban dalam penyimpanan data.
+
+3. **Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !**
+
+- **MongoDB**:
+
+    - Keunggulan:
+        Dokumen-Oriented: MongoDB adalah database NoSQL yang berorientasi pada dokumen. Ini berarti data disimpan dalam dokumen JSON-like yang fleksibel dan dapat memuat struktur data yang kompleks.
+        Skalabilitas Horizontal: MongoDB mendukung clustering dan replikasi, memungkinkan Anda untuk mengatasi skala dengan menambahkan lebih banyak node ke kluster.
+        Query yang Kaya: MongoDB menyediakan bahasa query yang kuat dan ekspresif, yang memungkinkan Anda untuk melakukan operasi pencarian, filter, dan agregasi data dengan mudah.
+        Indeks yang Kuat: MongoDB mendukung pembuatan indeks untuk meningkatkan kinerja query, memungkinkan pencarian efisien berdasarkan kriteria tertentu.
+        Fleksibilitas Schema: MongoDB tidak memerlukan skema yang ketat, sehingga Anda dapat dengan mudah menambahkan atau mengubah struktur data tanpa mempengaruhi aplikasi yang ada.
+
+- **Cassandra**:
+
+    - Keunggulan:
+        Distributed and Decentralized: Cassandra dirancang untuk operasi dalam lingkungan terdistribusi yang besar. Ini menyediakan skalabilitas linier dan toleransi kesalahan tinggi dengan mendistribusikan data di antara banyak node.
+        Kinerja Tinggi: Cassandra menawarkan kinerja tinggi untuk operasi tulis dan baca. Ini mencapai kinerja tinggi dengan desain data yang dioptimalkan untuk akses berbasis kolom dan partisi data yang terdistribusi.
+        Toleransi Kesalahan: Cassandra dirancang untuk menghadapi kegagalan node dengan baik. Dengan replikasi data di berbagai node, Cassandra memastikan ketersediaan data bahkan jika beberapa node mati.
+        Linier Scalability: Cassandra dapat dengan mudah di-scaling secara horizontal dengan menambahkan lebih banyak node ke dalam kluster. Ini memungkinkan Cassandra untuk menangani pertumbuhan data yang cepat tanpa mengorbankan kinerja.
+
+4. **Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !**
+
+- **Apache Airflow** adalah platform open-source yang digunakan untuk mengelola dan menjadwalkan alur kerja (workflow) yang kompleks dalam sistem pengolahan data. Dengan menggunakan Airflow, pengguna dapat mendefinisikan, menjadwalkan, dan mengeksekusi alur kerja yang terdiri dari serangkaian tugas yang saling terkait.
+
+5. **Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !**
+
+- **Great Expectations** adalah sebuah alat (tool) open-source yang digunkaan untuk memvalidasi, memonitor, dan mengelolan kualitas data dalam suatu sistem analisis data. Dengan menggunakan Great Expectations, pengguna dapat membuat dan mengelola harapan (expectations) terhadap data mereka, serta melakukan pemeriksaan otomatis terhadap data untuk memastikan bahwa data tersebut sesuai dengan harapan yang telah ditentukan.
+
+6. **Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !**
+
+- Definisi **Batch processing** adalah metode pengolahan data di mana data diproses dalam kelompok atau batch, biasanya dalam satu periode waktu tertentu, tanpa adanya interaksi langsung dengan pengguna. Proses ini memungkinkan efisiensi dan skala dalam pemrosesan data yang besar, seperti pengolahan transaksi, analisis data, atau pengolahan rapat.
+
+- **Contoh kasus**:
+    1. `Pengolahan Transaksi`: Dalam bisnis e-commerce, transaksi harian dapat diproses dalam batch pada akhir hari untuk menghitung total penjualan, menyusun laporan keuangan, dan memperbarui inventaris.
+    2. `Analisis Data Periodik`: Sebuah perusahaan dapat menjalankan batch processing untuk melakukan analisis data rutin, seperti analisis pelanggan, analisis kinerja produk, atau prediksi penjualan berdasarkan data historis.
+    3. `Pembaruan Data Periodik`: Pembaruan data dari sumber eksternal, seperti data cuaca, data pasar, atau data demografis, dapat dilakukan secara periodik melalui batch processing untuk memperbarui data dalam sistem internal.
+
+- **Tools**
+    1. `Apache Hadoop`
+    2. `Apache Spark`
+    3. `Apache Flink`
+    4. `Apache Arirflow`
+
+- **Manfaat**
+    1. `Skalabilitas`: Batch processing memungkinkan pemrosesan data dalam skala besar, dengan kemampuan untuk menangani volume data yang besar dan meningkat.
+    2. `Efisiensi`: Dengan memproses data dalam satu batch, dapat mengurangi beban sumber daya dan overhead yang terkait dengan memulai dan mengakhiri setiap tugas secara individual.
+    3. `Pemrosesan Terjadwal`: Proses batch dapat dijadwalkan untuk berjalan pada waktu tertentu, memungkinkan organisasi untuk mengatur proses pemrosesan data sesuai dengan jadwal yang diinginkan.
